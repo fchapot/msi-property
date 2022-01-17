@@ -8,8 +8,8 @@
   --largeurMain: 1240px;
   --largeurFond: 1240px;
   --hauteurFond: 560px;
-  --gap: calc(var(--largeurFond) - var(--largeurCarroussel));
   --largeurCarroussel: 1180px;
+  --gap: calc(var(--largeurFond) - var(--largeurCarroussel));
 }
 
 /*  --------------------  *\
@@ -38,7 +38,6 @@
 .site {
   width: var(--largeurMain);
   margin: 0 auto;
-  padding: 50px;
 }
 
 header {
@@ -174,8 +173,7 @@ footer {
   content: ' ';
   width: 70px;
   height: 70px;
-  color: #e9cb9c;
-  background-color: #e9cb9c;
+  background-color: var(--beige);
   position: absolute;
   top: -35px;
   left: -35px;
