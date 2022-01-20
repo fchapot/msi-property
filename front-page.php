@@ -22,7 +22,7 @@ get_header();
         <div class="center darkgrey"></div>
         <div class="right beige"></div>
       </div>
-      <div class="carrousel">
+      <div class="content-carrousel">
         <?php echo do_shortcode('[metaslider id="14"]'); ?>
       </div>
     </section>

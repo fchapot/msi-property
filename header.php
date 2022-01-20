@@ -27,6 +27,11 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
+
+		<?php the_field('type_de_bien') ?>
+		<?php the_title() ?>
+
+
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :

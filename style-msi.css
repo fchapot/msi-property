@@ -32,13 +32,22 @@
 }
 
 /*  --------------------  *\
-        HEADER
+        SITE
 \*  --------------------  */
+
+body {
+  font-family: "gothamBook";
+}
 
 .site {
   width: var(--largeurMain);
   margin: 0 auto;
 }
+
+
+/*  --------------------  *\
+        HEADER
+\*  --------------------  */
 
 header {
   height: 180px;
@@ -100,12 +109,6 @@ header {
   grid-template-columns: 7% 1fr 7%;
 }
 
-.carrousel {
-  position: relative;
-  width: var(--largeurCarroussel);
-  left: calc(var(--gap) / 2);
-  bottom: 35px;
-}
 
 .beige {
   background-color: var(--beige);
@@ -114,6 +117,53 @@ header {
 .darkgrey {
   background-color: var(--darkgrey);
 }
+
+.content-carrousel, .content-bien {
+  position: relative;
+  width: var(--largeurCarroussel);
+  left: calc(var(--gap) / 2);
+  bottom: 35px;
+}
+
+.content-bien {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: 1fr;
+}
+
+
+.description-bien{
+  text-transform: uppercase;
+  font-size: 1em;
+  background-color: var(--white);
+  align-self: end;
+  padding: 70px 125px 30px 50px
+}
+
+.description-bien-grid {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: repeat(4, 12%) 1fr;
+}
+
+.description-bien p:last-of-type{
+  text-transform: none;
+  font-size: 0.8em;
+}
+
+p.underscore::before {
+  content: '_';
+  font-size: 20px;
+  color: var(--beige);
+  margin-right: 10px;
+}
+img.picto, .underscore {
+display: inline;
+}
+
+/* li.picto-bien {
+  list-style: url('http://localhost:10064/wp-content/themes/msi-property/img/picto_10.svg');
+} */
 
 
 /*  --------------------  *\
