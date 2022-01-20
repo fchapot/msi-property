@@ -37,7 +37,7 @@ $slider = get_field('shortcode_du_slider');
 					<img class="picto picto-prix" src="<?= get_template_directory_uri() ?>/img/picto_05.svg" style="height:25px">	
         	<p class="underscore"><?php the_field('prix') ?> € FAI</p>
 			
-					<img class="picto picto-description" src="<?= get_template_directory_uri() ?>/img/picto_01.svg" style="height:25px">	
+					<img class="picto picto-description" src="<?= get_template_directory_uri() ?>/img/picto-main.svg" style="height:25px">	
         	<p class="underscore"><?php the_field('description') ?></p>
       </div>
     </div>

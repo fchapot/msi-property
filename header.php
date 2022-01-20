@@ -28,11 +28,16 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 
-		<?php the_field('type_de_bien') ?>
-		<?php the_title() ?>
+		<?php 
+		// On teste le post type pour conditionner l'affichage du logo ou du titre
+		if (get_post_type() == 'bien'){ ?>
 
+			<h1 class="bien-type"><?php the_field('type_de_bien') ;?></h1>
+			<h2 class="bien-location"><?php the_title() ;?></h2>
 
-			<?php
+<?php
+
+	} else {
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
@@ -41,13 +46,13 @@
 			else :
 				?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
+				<?php endif;
 			$msi_property_theme_description = get_bloginfo( 'description', 'display' );
 			if ( $msi_property_theme_description || is_customize_preview() ) :
 				?>
 				<p class="site-description"><?php echo $msi_property_theme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			<?php endif; } ?>
+
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

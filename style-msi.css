@@ -58,7 +58,7 @@ header {
 
 .site-branding {
   align-self: center;
-  width: 30%;
+  width: 35%;
 }
 
 /*  --------------------  *\
@@ -125,46 +125,6 @@ header {
   bottom: 35px;
 }
 
-.content-bien {
-  display: grid;
-  grid-template-columns: 4fr 3fr;
-  grid-template-rows: 1fr;
-}
-
-
-.description-bien{
-  text-transform: uppercase;
-  font-size: 1em;
-  background-color: var(--white);
-  align-self: end;
-  padding: 70px 125px 30px 50px
-}
-
-.description-bien-grid {
-  display: grid;
-  grid-template-columns: 15% 1fr;
-  grid-template-rows: repeat(4, 12%) 1fr;
-}
-
-.description-bien p:last-of-type{
-  text-transform: none;
-  font-size: 0.8em;
-}
-
-p.underscore::before {
-  content: '_';
-  font-size: 20px;
-  color: var(--beige);
-  margin-right: 10px;
-}
-img.picto, .underscore {
-display: inline;
-}
-
-/* li.picto-bien {
-  list-style: url('http://localhost:10064/wp-content/themes/msi-property/img/picto_10.svg');
-} */
-
 
 /*  --------------------  *\
         FOOTER
@@ -213,6 +173,7 @@ footer {
 /*  --------------------  *\
       QUI SOMMES NOUS
 \*  --------------------  */
+
 .content-not-front-page {
   margin-top: 25px;
 }
@@ -269,7 +230,7 @@ footer {
   width: 150px;
 }
 
-h2, h3 {
+h2, h3, h4, h5 {
   font-family: "gothamMedium";
 }
 
@@ -418,3 +379,75 @@ h4 span span {
   height: 50px;
   margin-top: 10px;
 }
+
+/*  --------------------  *\
+          BIEN
+\*  --------------------  */
+
+h1.bien-type {
+  text-transform: uppercase;
+  font-family: "gothamMedium";
+  font-size: 3em;
+  line-height: 10px;
+}
+
+h2.bien-location {
+  text-transform: uppercase;
+  color: var(--darkgrey);
+  font-size: 2.7em;
+  line-height: 10px;
+}
+
+h2.bien-location::before {
+  content: '[';
+  color: var(--beige);
+  margin-right: 0px;
+}
+
+h2.bien-location::after {
+  content: ']';
+  color: var(--beige);
+}
+
+.content-bien {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: 1fr;
+}
+
+
+.description-bien{
+  text-transform: uppercase;
+  font-size: 1em;
+  background-color: var(--white);
+  align-self: end;
+  padding: 70px 125px 30px 50px;
+  height: 500px;
+}
+
+.description-bien-grid {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: repeat(4, 10%) 1fr;
+}
+
+.description-bien p:last-of-type{
+  text-transform: none;
+  font-size: 0.8em;
+}
+
+p.underscore::before {
+  content: '_';
+  font-size: 20px;
+  color: var(--beige);
+  margin-right: 10px;
+}
+img.picto, .underscore {
+display: inline;
+}
+
+.description-bien .picto {
+  align-self: end;
+  margin-bottom: 10px;
+} 
+
