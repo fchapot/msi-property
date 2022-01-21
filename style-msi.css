@@ -94,6 +94,15 @@ header {
 li.menu-item.current-menu-item > a:visited {
   color: var(--beige);
 }
+ .sub-menu {
+   flex-direction: column;
+  }
+  
+  .sub-menu li {
+    border: 0 !important;
+    background-color: var(--white);
+    }
+
 
 /*  --------------------  *\
         CONTENT
@@ -121,7 +130,7 @@ li.menu-item.current-menu-item > a:visited {
   background-color: var(--darkgrey);
 }
 
-.content-carrousel, .content-bien, .content-nos-tarifs-transactions {
+.content-carrousel, .content-bien, .content-nos-tarifs {
   position: relative;
   width: var(--largeurContent);
   left: calc(var(--gap) / 2);
@@ -463,14 +472,14 @@ display: inline;
         NOS TARIFS
 \*  --------------------  */
 
-.content-nos-tarifs-transactions {
+.content-nos-tarifs {
   top: 10px;
   height: 510px;
   background-color: var(--white);
   margin-bottom: 80px;
 }
 
-.content-nos-tarifs-transactions {
+.content-nos-tarifs {
   display: grid;
   grid-template-columns: 4fr 6fr;
   grid-template-rows: 2fr 8fr;
@@ -483,7 +492,7 @@ display: inline;
   .div1-tarifs { grid-area: 1 / 1 / 2 / 2; }
   .div2-tarifs { grid-area: 1 / 2 / 2 / 3; justify-self: start;}
   .div3-tarifs { grid-area: 2 / 1 / 3 / 2; }
-  .div4-tarifs { grid-area: 2 / 2 / 3 / 3; }
+  .div4-tarifs { grid-area: 2 / 2 / 3 / 3; justify-self: start;}
 
 .table-tarifs {
   text-align: center; 
@@ -508,7 +517,7 @@ td.left{
 .table-tarifs td {
   padding:5px;
 }
-.picto-nos-tarifs-transactions{
+.picto-nos-tarifs{
   height: 17em;
 }
 
@@ -531,20 +540,49 @@ td.left{
   background-color: var(--white);
 }
 
-p.menu-tarif {
+a.menu-tarif {
+  text-decoration: none;
   font-family: "gothamMedium";
   margin: 0;
   font-size: 1.5em;
+  color: var(--darkgrey);
 }
 
-p.menu-tarif span{
+a.menu-tarif span{
   font-family: "gothamBook";
 }
 
-p.menu-tarif-on {
+a.menu-tarif-on {
   background: var(--beige);
   padding: 6px 16px;;
 }
-P.menu-tarif-off{
+a.menu-tarif-off{
 color: var(--lightgrey);
+}
+
+p.charge {
+  text-align: center;
+  border: 2px solid var(--beige);
+  width: 18em;
+  padding: 4px 0;
+}
+
+.div4-tarifs section {
+  margin-bottom: 50px;
+}
+
+.div4-tarifs p {
+  margin: 8px 0;
+}
+
+.prixTTC {
+  font-family: "gothamMedium";
+}
+
+#on{
+  display: grid;
+}
+
+#off{
+  display: none;
 }

@@ -97,3 +97,11 @@
 		}
 	}
 }() );
+
+let tabs = document.querySelectorAll('.content-nos-tarifs')
+for (i = 0; i < blocksTarifs.length; i++){
+	blocksTarifs[i].addEventListener('click', function(e){
+			let div = 
+
+	})
+}
