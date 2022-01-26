@@ -1,7 +1,7 @@
 (function() {
   function incrementNumber(node,nb) {
 
-    let sectionNumbers = document.onload('.sectionNumbers');   
+    let sectionNumbers = window.onload('.sectionNumbers');   
     let sectionCounter = 0;
     let numbers = document.querySelector("."+node);
 
@@ -29,4 +29,5 @@
     incrementNumber("number2", 456);
     incrementNumber("number3", 678);
   }, 2000);
-})();
+})
+();

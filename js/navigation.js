@@ -98,10 +98,22 @@
 	}
 }() );
 
-let tabs = document.querySelectorAll('.content-nos-tarifs')
-for (i = 0; i < blocksTarifs.length; i++){
-	blocksTarifs[i].addEventListener('click', function(e){
-			let div = 
+// PSEUDO CODE : 
 
+// Quand on clique sur un menu, s'il n'a pas la class ON on l'ajoute - s'il a déjàla class ON,  on ne fait rien;
+
+// Quand on clique sur le menu #transaction on supprime ACTIVE de toutes les enfants de div4
+// et on ajoute ACTIVE à la div.transactions
+
+// Quand on clique sur le menu #locations on supprime ACTIVE de toutes les enfants de div4
+// et on ajoute ACTIVE à la div.locations et 
+
+let choix = document.querySelectorAll('.choix a')
+for (i = 0; i < choix.length; i++){
+
+	choix[i].addEventListener('click', function(e){
+		let div = this.parentNode.parentNode
+		debugger
+		div.querySelector('.menu-tarif .on').classList.remove('on')
 	})
 }
